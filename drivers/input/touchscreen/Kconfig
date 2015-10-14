@@ -160,6 +160,17 @@ config TOUCHSCREEN_ATMEL_T641
 	  To compile this driver as a module, choose M here: the
 	  module will be called atmel_t641.
 
+config TOUCHSCREEN_ATMEL_T641_TWRP
+	tristate "Atmel mXT 641T hack for TWRP"
+	depends on TOUCHSCREEN_ATMEL_T641
+	help
+	  Say Y here to trigger a resume event on device init for TWRP,
+	  and enable sysfs nodes for FB suspend/resume events.
+
+	  This should not be enabled unless used for initialization of TWRP.
+
+	  If unsure, say N.
+
 config TOUCHSCREEN_ATMEL_T1664
 	tristate "Atmel mXT 1664T2 I2C Touchscreen"
 	depends on I2C
@@ -183,6 +194,17 @@ config TOUCHSCREEN_ATMEL_T1066
 
 	  To compile this driver as a module, choose M here: the
 	  module will be called atmel_t1066.
+
+config TOUCHSCREEN_ATMEL_T1066_TWRP
+        tristate "Atmel mXT 1066T hack for TWRP"
+        depends on TOUCHSCREEN_ATMEL_T1066
+        help
+          Say Y here to trigger a resume event on device init for TWRP,
+          and enable sysfs nodes for FB suspend/resume events.
+
+          This should not be enabled unless used for initialization of TWRP.
+
+          If unsure, say N.
 
 config TOUCHSCREEN_ATMEL_MAXTOUCH_TS
 	tristate "Atmel Maxtouch Touchscreen Family"
