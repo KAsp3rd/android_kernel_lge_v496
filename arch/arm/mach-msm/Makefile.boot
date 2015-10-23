@@ -101,6 +101,22 @@ endif
 # MSM8226
    zreladdr-$(CONFIG_ARCH_MSM8226)	:= 0x00008000
 ifeq ($(CONFIG_MACH_LGE),y)
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte-bt.dtb
+	dtb-$(CONFIG_ARCH_MSM8226)      +=  msm8226-t8lte.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-hdmi.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-misc.dtb  
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-panel.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-sensor.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-usb.dtb
+	dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-v2-t8lte.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-camera.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-input.dtb
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-nfc.dtb  
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-pm.dtb    
+	#dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-t8lte_tmo_us/msm8226-t8lte-sound.dtb
+	dtb-$(CONFIG_ARCH_MSM8226)      += msm8226-v1-t8lte.dtb
+
 else # not CONFIG_MACH_LGE
 	dtb-$(CONFIG_ARCH_MSM8226)	+= msm8226-sim.dtb
 	dtb-$(CONFIG_ARCH_MSM8226)	+= msm8226-fluid.dtb
@@ -158,6 +174,8 @@ initrd_phys-$(CONFIG_ARCH_FSM9XXX)	:= 0x12000000
 # MSM8610
    zreladdr-$(CONFIG_ARCH_MSM8610)	:= 0x00008000
 ifeq ($(CONFIG_MACH_LGE),y)
+
+
 else # not CONFIG_MACH_LGE
         dtb-$(CONFIG_ARCH_MSM8610)	+= msm8610-v1-cdp.dtb
         dtb-$(CONFIG_ARCH_MSM8610)	+= msm8610-v2-cdp.dtb
