@@ -15,6 +15,6 @@
 
 / {
 	model = "Qualcomm MSM 8926 t8lteattus";
-	compatible = "qcom,msm8926-t8lteattus", "qcom,msm8926", "qcom,msm8226","qcom,mtp";
+	compatible = "qcom,msm8926-t8lteattus", "qcom,msm8926", "qcom,mtp";
 	qcom,board-id = <185 0>;
 };
